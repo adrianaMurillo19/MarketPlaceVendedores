@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchoPane" prefHeight="686.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.marketPlace.controller.MarketPlaceAdministradorController">
+   <children>
+      <Accordion layoutX="168.0" layoutY="167.0" />
+      <Pane fx:id="panelAdmin" layoutY="76.0" prefHeight="428.0" prefWidth="164.0" style="-fx-background-color: #FFD700; -fx-border-color: #F08080;">
+         <children>
+            <Label layoutX="33.0" layoutY="40.0" prefHeight="20.0" prefWidth="106.0" text="Administración">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCerrarSesion" layoutX="19.0" layoutY="306.0" mnemonicParsing="false" onAction="#cerrarSesionAction" style="-fx-background-color: #DAA520;" text="Cerrar Sesión">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="Imagen" fitHeight="113.0" fitWidth="120.0" layoutX="16.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/2.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelFechaPro" layoutX="13.0" layoutY="187.0" text="Fecha:">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelHoraPro" layoutX="16.0" layoutY="204.0" text="Hora:">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelFechaActualPro" layoutX="59.0" layoutY="161.0" prefHeight="91.0" prefWidth="89.0" />
+         </children>
+      </Pane>
+      <TabPane layoutX="165.0" layoutY="75.0" prefHeight="590.0" prefWidth="534.0" style="-fx-border-color: #666;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Registro Vendedores">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="531.0" prefWidth="498.0">
+                     <children>
+                        <Label fx:id="labelNombreV" layoutX="13.0" layoutY="31.0" text="Nombre(s):">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelCedulaV" layoutX="13.0" layoutY="61.0" text="Cedula:">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelApellidoV" layoutX="271.0" layoutY="31.0" text="Apellido(s):">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelUsuarioV" layoutX="12.0" layoutY="93.0" text="Usuario:">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelClaveV" layoutX="272.0" layoutY="93.0" text="Contraseña:">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelDireccionV" layoutX="274.0" layoutY="61.0" text="Dirección:">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNombreV" layoutX="79.0" layoutY="27.0" prefHeight="25.0" prefWidth="183.0" style="-fx-border-color: #FFD700;" />
+                        <TextField fx:id="txtCedulaV" layoutX="79.0" layoutY="57.0" prefHeight="25.0" prefWidth="183.0" style="-fx-border-color: #FFD700;" />
+                        <TextField fx:id="txtUsuarioV" layoutX="79.0" layoutY="89.0" prefHeight="25.0" prefWidth="183.0" style="-fx-border-color: #FFD700;" />
+                        <TextField fx:id="txtApellidoV" layoutX="333.0" layoutY="27.0" prefHeight="25.0" prefWidth="153.0" style="-fx-border-color: #FFD700;" />
+                        <TextField fx:id="txtDireccionV" layoutX="333.0" layoutY="57.0" prefHeight="25.0" prefWidth="153.0" style="-fx-border-color: #FFD700;" />
+                        <TextField fx:id="txtClaveV" layoutX="340.0" layoutY="89.0" prefHeight="25.0" prefWidth="145.0" style="-fx-border-color: #FFD700;" />
+                        <Separator layoutY="185.0" prefHeight="12.0" prefWidth="529.0" style="-fx-background-color: #FFD700;" />
+                        <Button fx:id="btnNuevoV" layoutX="64.0" layoutY="145.0" mnemonicParsing="false" onAction="#nuevoVendedorAction" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #FFD700;" text="Nuevo">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnAgregarV" layoutX="205.0" layoutY="145.0" mnemonicParsing="false" onAction="#agregarVendedorAction" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #FFD700;" text="Agregar">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnActualizar" layoutX="350.0" layoutY="145.0" mnemonicParsing="false" onAction="#actualizarVendedorAction" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #FFD700;" text="Actualizar">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="tableV" layoutY="239.0" prefHeight="194.0" prefWidth="504.0" style="-fx-border-color: #FFD700;">
+                          <columns>
+                            <TableColumn fx:id="columnaNombre" prefWidth="125.0" text="Nombre" />
+                              <TableColumn fx:id="columnaCedula" prefWidth="97.0" text="Cedula" />
+                              <TableColumn fx:id="columnaUsuario" prefWidth="127.0" text="Usuario" />
+                              <TableColumn fx:id="columnaContrasenia" prefWidth="94.0" text="Password" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnEliminarV" layoutX="199.0" layoutY="457.0" mnemonicParsing="false" onAction="#eliminarVendedorAction" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #FFD700;" text="Eliminar">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Monitoreo Vendedores">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Estadisticas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label fx:id="txtTituloV" layoutX="225.0" layoutY="25.0" prefHeight="35.0" prefWidth="251.0" text="Gestión Marketplace">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-1.0" layoutY="54.0" prefHeight="19.0" prefWidth="707.0" />
+   </children>
+</AnchorPane>
